@@ -1,2 +1,7 @@
 title: Data Access Facility
 theme: jekyll-theme-slate
+navigation:
+  - title: Home
+    url: /
+  - title: Google Sheets Client
+    url: /google-sheets-client
