@@ -1,3 +1,5 @@
+* TOC {:toc}
+
 # Data Access Facility
 
 Data Access Facility is an open-source software package that provides a simple and efficient way to access data in
