@@ -10,7 +10,14 @@ mapped to files.
 
 An example mapping for a table that holds users is shown below:
 
-```login[unique=true], name, company_id(name), active[filter=$], create_date```
+```login[unique=true], name, active[filter=$], company_id(name)[filter="$ like 'company%'", create_date```
+
+This mapping defines the following columns:
+- `login`: Mapping the 'login' column in the relational model. The modifier defines it as unique key, so we can use it address rows when posting modification to the table.
+- `name`: Mapping the 'name' column in the relational model.
+- `active`: Mapping the 'active' column in the relational model. The modifier defines a filter to include only those rows where the 'active' column contains the boolean value 'True'.
+- `company_id`: Mapping the 'company_id' column in the relational model, using the 'name' attribute from the referenced record. The modifier defines a filter to include only those rows where the 'company_id' column contains a value that starts with 'company'.
+- `create_date`: Mapping the 'create_date' column in the relational model.
 
 ## Syntax
 
